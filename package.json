@@ -1,6 +1,6 @@
 {
   "name": "depcap",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Limit the number of dependencies",
   "main": "index.js",
   "scripts": {
@@ -9,6 +9,9 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mrsteele/depcap.git"
+  },
+  "bin": {
+    "depcap": "."
   },
   "author": "Matt Steele",
   "license": "MIT",
