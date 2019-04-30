@@ -15,7 +15,7 @@ before_install:
 install:
   - npm install
 script:
-  - npm run travis
+  - npm run test
 after_script:
   - npx codecov
   - ./cc-test-reporter after-build -r $CODECLIMATE_REPO_TOKEN --exit-code $TRAVIS_TEST_RESULT
