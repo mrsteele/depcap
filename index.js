@@ -2,16 +2,17 @@
 const path = require('path')
 
 const defaultLimit = 10
-const defaultLimits = {
-  dependencies: defaultLimit,
-  devDependencies: defaultLimit,
-  optionalDependencies: defaultLimit
-}
 const depArr = [
   'dependencies',
   'devDependencies',
-  'optionalDependencies'
+  'optionalDependencies',
+  'peerdependencies',
+  'bundleddependencies'
 ]
+const defaultLimits = depArr.reduce((all, dep) => {
+  all[dep] = defaultLimit
+  return all
+}, {})
 
 const parseConfig = (config) => {
   if (Number.isInteger(config)) {

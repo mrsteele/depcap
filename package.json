@@ -1,14 +1,15 @@
 {
   "name": "depcap",
-  "version": "0.1.0",
+  "version": "0.0.0-development",
   "description": "Limit the number of dependencies",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha",
+    "lint": "standard"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mrsteele/depcap.git"
+    "url": "https://github.com/mrsteele/depcap.git"
   },
   "bin": {
     "depcap": "./index.js"
@@ -25,5 +26,10 @@
     "max",
     "cap",
     "package.json"
-  ]
+  ],
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4",
+    "standard": "^12.0.1"
+  }
 }
